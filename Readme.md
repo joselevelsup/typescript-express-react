@@ -14,8 +14,14 @@ To Run this application, follow the steps in order:
 3. `cd` in the `client` folder and do another `npm install`
 4. To test: 
 
-    - 
+    - Make sure you are in the root project directory
+    - type `npm run app:start`, This will run the app in its Development environment
+5. To build for Production:
 
+    - Make sure you are in the root project directory
+    - type `npm run app:prod`, This will run the app in its Production environment
+
+6. That's it! Happy Coding!
 
 To-Do (In General): 
 -  ~~Make the server compile to JS along with the React App~~
@@ -32,6 +38,6 @@ To-Do (Front End):
 
 ---
 
-If you wish, you can fork this for your own needs. It is currently still in development. 
+If you wish, you can fork this for your own needs. ~~It is currently still in development~~. 
 
 Keep It Live,<br/>joselevelsup
