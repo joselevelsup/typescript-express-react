@@ -4,14 +4,10 @@
   "description": "An Express server using React and Typescript",
   "main": "server.js",
   "scripts": {
-    "app:build": "gulp compile && react-scripts build",
-    "server:start": "node ./bin/www",
-    "react:start": "react-scripts start",
-    "server:build": "gulp compile",
-    "react:build": "react-scripts build",
-    "server:dev": "gulp serve",
-    "react:test": "react-scripts test --env=jsdom",
-    "react:eject": "react-scripts eject"
+    "app:start": "concurrently \"npm run start\" \"cd client && npm run start\"",
+    "start": "gulp compile && node ./bin/www",
+    "build": "gulp compile",
+    "dev": "gulp serve"
   },
   "author": "joselevelsup",
   "license": "ISC",
@@ -21,15 +17,13 @@
     "@types/mongodb": "^2.2.11",
     "@types/mongoose": "^4.7.23",
     "@types/uuid": "^3.4.2",
+    "concurrently": "^3.5.0",
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.2.1",
     "gulp-typescript": "^3.2.2",
     "typescript": "^2.5.3"
   },
   "dependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14",
     "body-parser": "^1.18.2",
     "express": "^4.15.5",
     "mongoose": "^4.11.13",

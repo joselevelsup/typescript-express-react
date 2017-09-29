@@ -25,9 +25,11 @@ export class Server{
 
         if(this.app.get("env") !== "development"){
             router.get("*", (req: express.Request, res: express.Response) => {
-                res.sendFile(path.join(__dirname, "../client/build/index.html"));
+                res.sendFile(path.join(__dirname, "../public/index.html"));
             });
         }
+
+        APIRoute.create(router);
 
         this.app.use(router);
     }

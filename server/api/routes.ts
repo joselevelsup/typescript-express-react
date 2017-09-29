@@ -1,10 +1,7 @@
 import { Request, Response, NextFunction, Router } from "express";
-import BaseRoute from "./base";
+import * as path from "path";
 
-export default class APIRoutes extends BaseRoute{
-    constructor(){
-        super();
-    }
+export default class APIRoutes{
 
     public static create(router: Router){
         router.get("/heroes", (req: Request, res: Response) => {
@@ -13,6 +10,9 @@ export default class APIRoutes extends BaseRoute{
     }
 
     public getHeroes(req: Request, res: Response){
-        
+        res.json({
+            "success": true,
+            "body": "Heroes aren't here yet"
+        });
     }
 }
