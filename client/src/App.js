@@ -1,31 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Link, Route } from "react-router-dom";
 import './App.css';
+import Home from "./components/home/home";
+import About from "./components/about/about";
+import Create from "./components/create/create";
 
 class App extends Component {
 
-  componentDidMount(){
-    fetch("/heroes", {
-      accept: 'application/json'
-    }).then((resp) => {
-      return resp.json()
-    }).then((data) => {
-      console.log(data);
-    }).catch((err) => {
-      console.log(err);
-    })
-  }
-
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/create">Create</Link></li>
+        </ul>
+
+        <hr/>
+
+        <Route exact="/" path="/" component={Home}/>
+        <Route path="/about" component={About}/>
+        <Route path="/create" component={Create} />
       </div>
     );
   }

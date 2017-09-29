@@ -1,5 +1,6 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
+import * as mongoose from "mongoose";
 import * as path from "path";
 import APIRoute from "./api/routes";
 
@@ -18,6 +19,8 @@ export class Server{
             extended: true
         }));
         this.app.use(express.static(path.join(__dirname, "../client/static")));
+
+        mongoose.connect("mongodb://localhost/heroes");
     }
 
     private routes(){
@@ -28,7 +31,7 @@ export class Server{
                 res.sendFile(path.join(__dirname, "../public/index.html"));
             });
         }
-
+ 
         APIRoute.create(router);
 
         this.app.use(router);

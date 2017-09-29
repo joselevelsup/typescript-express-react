@@ -4,7 +4,7 @@
   "description": "An Express server using React and Typescript",
   "main": "server.js",
   "scripts": {
-    "app:start": "concurrently \"npm run start\" \"cd client && npm run start\"",
+    "app:start": "concurrently \"npm run dev\" \"cd client && npm run start\"",
     "start": "gulp compile && node ./bin/www",
     "build": "gulp compile",
     "dev": "gulp serve"

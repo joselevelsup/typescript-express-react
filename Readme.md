@@ -3,18 +3,16 @@
 This Repository utilizes Typescript as the Programming Language, Express for the Server Side library, React for the Front End, and MongoDB for Database
 
 To-Do (In General): 
-- Make the server compile to JS along with the React App
+-  ~~Make the server compile to JS along with the React App~~
 
 To-Do (Back End): 
-- Setup API Endpoints
-- Setup Models for DB
-- Authentication
+- ~~Setup API Endpoints~~
+- ~~Setup Models for DB~~
 
 To-Do (Front End): 
-- Setup Routing (using React Router)
-- Call to APIs 
-- Login/Signup
-- Rendering Data
+- ~~Setup Routing (using React Router)~~
+- ~~Call to APIs~~ 
+- ~~Rendering Data~~
 
 
 ---
