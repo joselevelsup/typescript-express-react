@@ -1,7 +1,8 @@
 var gulp = require("gulp"),
     ts = require("gulp-typescript"),
-    nodemon = require("gulp-nodemon"),
-    tsProject = ts.createProject("tsconfig.json");
+    nodemon = require("gulp-nodemon");
+
+var tsProject = ts.createProject("tsconfig.json");
 
 gulp.task("compile", function(){
     return tsProject.src()
@@ -10,13 +11,13 @@ gulp.task("compile", function(){
 });
 
 gulp.task("watch", ["compile"], function(){
-    gulp.watch("./src/**/**.ts", ["compile"]);
+    gulp.watch("./server/**/**.ts", ["compile"]);
 });
 
 gulp.task("serve", ["compile"], function(){
     var stream = nodemon({
         script: "./bin/www",
-        watch: "src",
+        watch: "server",
         ext: "ts",
         tasks: ["compile"],
         env: {
