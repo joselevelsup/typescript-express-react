@@ -2,6 +2,21 @@
 
 This Repository utilizes Typescript as the Programming Language, Express for the Server Side library, React for the Front End, and MongoDB for Database
 
+Server: Contains all the source files for the Server
+
+Client: Contians the React Application
+
+bin: Contains the file needed to Run the Server
+
+To Run this application, follow the steps in order:
+1. `git clone https://github.com/joselevelsup/typescript-express-react`
+2. `cd` into the project folder and type in `npm install`
+3. `cd` in the `client` folder and do another `npm install`
+4. To test: 
+
+    - 
+
+
 To-Do (In General): 
 -  ~~Make the server compile to JS along with the React App~~
 

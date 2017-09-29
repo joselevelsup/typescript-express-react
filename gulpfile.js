@@ -10,10 +10,6 @@ gulp.task("compile", function(){
         .js.pipe(gulp.dest("./buildServer"));
 });
 
-gulp.task("watch", ["compile"], function(){
-    gulp.watch("./server/**/**.ts", ["compile"]);
-});
-
 gulp.task("serve", ["compile"], function(){
     var stream = nodemon({
         script: "./bin/www",
